@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Valor da conta"
+        android:text="Valor total da conta:"
         android:textColor="#E6E619"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,75 +58,86 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/background_cardview"
-            android:orientation="horizontal">
+            android:background="@drawable/background_cardview">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="230dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtGorjeta"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:text="R$ 00,00"
+                android:textColor="#FFFF"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtG" />
 
-                <TextView
-                    android:id="@+id/txtGorjeta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="R$ 00,00"
-                    android:textColor="#FFFF"
-                    android:textSize="30dp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtG"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Valor da gorjeta"
+                android:textColor="#FFFF"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/txtG"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Gorjeta"
-                    android:textColor="#FFFF"
-                    android:textSize="20dp" />
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="R$ 00,00"
+                android:textColor="#FFFF"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtT" />
 
-                <TextView
-                    android:id="@+id/txtTotal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="R$ 00,00"
-                    android:textColor="#FFFF"
-                    android:textSize="30dp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:text="Valor da conta"
+                android:textColor="#FFFF"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtGorjeta" />
 
-                <TextView
-                    android:id="@+id/txtT"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Total da conta"
-                    android:textColor="#FFFF"
-                    android:textSize="20dp" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logoum" />
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:orientation="vertical">
-
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/logoum" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
