@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -12,12 +13,15 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
+        testeLottie.setAnimation("myfile.json")
+
+
         var handler = Handler()
         handler.postDelayed(Runnable {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 5000)
 
     }
 }
