@@ -10,13 +10,12 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="50dp"
+        android:layout_height="196dp"
         app:layout_constraintBottom_toTopOf="@+id/testeLottie"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78"
         app:srcCompat="@drawable/logoum" />
 
     <com.airbnb.lottie.LottieAnimationView

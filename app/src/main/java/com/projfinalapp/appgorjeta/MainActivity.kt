@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         if (valorRecuperado == null || valorRecuperado == ""){
 
-            Toast.makeText(this, "Digite um valor para fazer o calculo!", Toast.LENGTH_SHORT).show()
 
         }else{
 

@@ -38,7 +38,7 @@
 
     <TextView
         android:id="@+id/txtPorcentagem"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="0%"
         android:textColor="#E6E619"
@@ -50,9 +50,11 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="315dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +68,7 @@
             <TextView
                 android:id="@+id/txtGorjeta"
                 android:layout_width="0dp"
-                android:layout_height="32dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="R$ 00,00"
                 android:textColor="#FFFF"
